@@ -1,12 +1,11 @@
 const express= require("express");
-const mongoose = require("mongoose");
 const http = require("http");
 const cors = require("cors");
 const Joi = require("joi");
 const config= process.env;
 require('dotenv').config();
 const validator=require("express-joi-validation").createValidator({});
-const PORT = process.env.PORT;
+const PORT = process.env.PORT||3002;
 const {addUser,checkUser} = require("./users");
 
 const app=express()
